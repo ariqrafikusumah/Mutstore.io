@@ -127,7 +127,7 @@ export default function Genshinimpact2() {
             const data = snapshot.val();
             if (data !== null) {
                 Object.values(data).map((item) => {
-                    setDataProduct((oldArray) => [...oldArray, item].sort((a, b) => a.code - b.code));
+                    setDataProduct((oldArray) => [...oldArray, item].sort((a, b) => a.code.localeCompare(b.code)));
                 });
                 setisLoading(false);
             } else {

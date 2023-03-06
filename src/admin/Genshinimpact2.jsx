@@ -63,7 +63,7 @@ function Genshinimpact2() {
 
     // ** Delete
     const handleDelete = (item) => {
-        remove(ref(db, `/product-gi/${item.uuid}`));
+        remove(ref(db, `/product-gi-2/${item.uuid}`));
     };
 
     //** Update
@@ -282,7 +282,7 @@ function TambahData(props) {
     // ** Write
     const handleOnSubmit = () => {
         const uuid = uid();
-        set(ref(db, `/product-gi/${uuid}`), {
+        set(ref(db, `/product-gi-2/${uuid}`), {
             product_name,
             price,
             picture,
@@ -399,7 +399,7 @@ function EditData(props) {
         console.log("tempUuid :", product_name, price, picture, code, tempUuid);
         e.preventDefault();
         if (tempUuid) {
-            update(ref(db, `/product-gi/${tempUuid}`), {
+            update(ref(db, `/product-gi-2/${tempUuid}`), {
                 product_name,
                 price,
                 picture,
